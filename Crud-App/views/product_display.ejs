@@ -1,0 +1,25 @@
+<a href="/product_add">Add Products</a>
+<% if(db_rows_arr.length>0){ %>
+        <table border="5">
+            <tr>
+                <td>Product ID</td>
+                <td>Product Name</td>
+                <td>Product Details</td>
+                  <td>Product Price</td>
+                <td>Product Stock</td>
+                <td>Action</td>
+            </tr>
+            <% for(var i=0;i<db_rows_arr.length;i++) {  %>
+                <tr>
+                    <td><%= db_rows_arr[i].product_id %></td>
+                    <td><%= db_rows_arr[i].product_name %></td>
+                    <td><%= db_rows_arr[i].product_details %></td>
+                    <td><%= db_rows_arr[i].product_price %></td>
+                    <td><%= db_rows_arr[i].product_stock %></td>
+                    <td><a href="/edit/<%= db_rows_arr[i].product_id %>">Edit</a> | <a href="/delete/<%= db_rows_arr[i].product_id %>">Delete</a> </td>
+                </tr>
+                <% } %>
+        </table>
+    <%} else {%>
+            NO Data Found or Database Empty 
+        <%}%>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <div>
+        <h1>Add Product Details</h1>
+        <form action="/add-process" method="POST">
+            <table>
+                <tr>
+                    <td><label for="product_name">Product Name:</label></td>
+                    <td><input type="text" name="product_name" placeholder="Enter Product Name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="product_details">Product Details:</label></td>
+                    <td><input type="text" name="product_details" placeholder="Enter Product Details" required></td>
+                </tr>
+                <tr>
+                    <td><label for="product_price">Product Price:</label></td>
+                    <td><input type="text" name="product_price" placeholder="Enter Product Price" required></td>
+                </tr>
+                <tr>
+                    <td><label for="product_stock">Stock Details:</label></td>
+                    <td><input type="text" name="product_stock" placeholder="Enter Stock Details" required></td>
+                </tr>
+                <tr>
+                    <td><input type="submit"></td>
+                </tr>
+            </table>
+        </form>
+        <a href="/product_display">View Records</a>
+    </div>
+</body>
+</html>
